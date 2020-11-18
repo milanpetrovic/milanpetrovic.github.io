@@ -21645,9 +21645,7 @@ video {
 }
 
 :root {
-  --main-color: #1796bf;
-  --text-color: #22273c;
-  --background-color: #f5f6f8;
+  --gold-color: #9e8656;
 }
 
 svg {
@@ -21656,6 +21654,10 @@ svg {
 
 body {
   font-family: 'Montserrat', sans-serif;
+}
+
+.gold {
+  color: var(--gold-color);
 }
 
 @media only screen and (max-width: 81.25em) {
