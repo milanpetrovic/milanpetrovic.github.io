@@ -1,0 +1,45 @@
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --main-color: #1796bf;
+    --text-color: #22273c;
+    --background-color: #f5f6f8;
+}
+
+svg {
+    max-width: 2em;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+@media only screen and (max-width: 81.25em) { 
+    
+}
+
+@media only screen and (max-width: 68.75em) { 
+
+}
+
+@media only screen and (max-width: 56.25em) { 
+    
+}
+
+@media only screen and (max-width: 37.5em) { 
+    
+}
+
+@media only screen and (max-width: 31.25em) { 
+    
+}
