@@ -21648,16 +21648,38 @@ video {
   --gold-color: #9e8656;
 }
 
-svg {
-  max-width: 2em;
-}
+/* svg {
+    max-width: 2em;
+} */
 
 body {
   font-family: 'Montserrat', sans-serif;
 }
 
-.gold {
+.gold,
+.school,
+.work__position > span {
   color: var(--gold-color);
+}
+
+.title__before,
+.title__after {
+  border-top: 1px solid var(--gold-color);
+}
+
+.knowledge {
+  flex: 0 0 30%;
+}
+
+.knowledge__skills ul li {
+  padding: 0.2em 0.75em;
+  background-color: #efefef;
+  border-radius: 150px;
+  margin-top: .75em;
+}
+
+.knowledge__skills ul li:not(:last-of-type) {
+  margin-right: 0.5em;
 }
 
 @media only screen and (max-width: 81.25em) {
