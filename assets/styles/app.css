@@ -21648,9 +21648,14 @@ video {
   --gold-color: #9e8656;
 }
 
-/* svg {
-    max-width: 2em;
-} */
+a {
+  color: #2D3748;
+  font-weight: 600;
+}
+
+a:hover {
+  text-decoration: underline;
+}
 
 body {
   font-family: 'Montserrat', sans-serif;
