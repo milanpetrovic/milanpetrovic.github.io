@@ -2,175 +2,136 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fullstack Web Developer Milan Petrovic</title>
+    <meta name="description" content="Self-motivated and self-taught full-stack web developer with a passion for learning with an endless supply of optimism and curiosity.">
 
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/styles/app.css">
+    <!-- Google Fonts -->
+    <link rel="preload" href="/assets/ScandiaWebMedium.woff" as="font" type="font/woff" crossorigin>
+    <link rel="preload" href="/assets/ScandiaWebMedium.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/assets/ScandiaWebRegular.woff" as="font" type="font/woff" crossorigin>
+    <link rel="preload" href="/assets/ScandiaWebRegular.woff2" as="font" type="font/woff2" crossorigin>
 
-    <script src="https://kit.fontawesome.com/f3a426fd53.js" crossorigin="anonymous" defer></script>
-    <script src="assets/scripts/app.js" defer></script>
+    <!-- Tailwind CSS -->
+    <link rel="stylesheet" href="assets/css/build.min.css">
+
+    <script>
+        // On page load or when changing themes, best to add inline in `head` to avoid FOUC
+        if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark')
+        }
+    </script>
 </head>
-<body>
-    <div class="container mx-auto shadow-xl">
-        <header class="bg-gray-800 flex flex-col justify-center items-center text-center px-8">
-            <div class="name py-12 w-11/12">
-                <h1 class="text-white text-4xl lg:text-6xl font-semibold uppercase tracking-widest">Milan Petrovic</h1>
-                <div class="title flex items-center">
-                    <div class="title__before flex-auto"></div>
-                    <h3 class="gold text-xl lg:text-3xl uppercase font-semibold tracking-wider flex-auto">Fullstack Web Developer</h2>
-                    <div class="title__after flex-auto"></div>
+<body class="bg-gray-100 dark:bg-gray-900 print:bg-white">
+
+    <header class="bg-gray-800 dark:bg-slate-800 w-full print:hidden">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:max-w-7xl lg:px-8">
+            <div class="flex items-center justify-between py-4">
+                <h3 class="text-white dark:text-slate-400">Milan's Digital CV</h3>
+
+                <div>
+                    <button id="theme-toggle" type="button" class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5">
+                        <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+                        <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+                    </button>
+
+                    <button type="button" onclick="window.print()" class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z" />
+                          </svg>
+                    </button>
                 </div>
-            </div>
-        </header>
-
-        <div class="profile flex flex-col md:flex-row py-12 px-8 items-center">
-            <div class="profile__img flex justify-center">
-                <img src="assets/img/milan.jpeg" class="w-1/2 md:w-full rounded-full shadow-xl" alt="Fullstack Web Developer Milan Petrovic">
-            </div>
-
-            <div class="profile__bio md:pl-12 pt-8 md:pt-0">
-                <p class="pb-4">Self-motivated and self-taught full-stack web developer with a passion for learning with an endless supply of optimism and curiosity. An expert at PHP / WordPress / Front-End development, having spent 7 years developing websites and web apps for numerous clients across the globe.</p>
-
-                <p>Currently growing increasingly comfortable and familiar with MERN stack by learning from seasoned developers and by pushing my coding skills while developing real-world apps. My objective is to simply become the best web developer I can possibly be.</p>
-
             </div>
         </div>
+    </header>
 
-        <main class="flex flex-col md:flex-row justify-evenly md:border-t-2 border-gray-700 pb-12 px-8">
-            <div class="knowledge order-2 md:order-1 md:pr-8 md:border-r-2 border-gray-700">
-                <h2 class="py-4 uppercase border-b-2 border-t-2 md:border-t-0 border-gray-700 mb-6 text-center font-semibold tracking-wider">Contact</h2>
-                <ul class="flex flex-col justify-evenly mb-6">
-                    <li class="flex items-center">
-                        <i class="fas fa-mobile-alt gold pb-2"></i>
-                        <span class="pl-2 pb-2"><a href="tel:+381643246671">+381643246671</a></span>
-                    </li>
-                    <li class="flex items-center">
-                        <i class="fas fa-at gold pb-2"></i>
-                        <span class="pl-2 pb-2"><a href="mailto:milanmushin@gmail.com">milanmushin@gmail.com</a></span>
-                    </li>
-                    <li class="flex items-center">
-                        <i class="fab fa-github gold pb-2"></i>
-                        <span class="pl-2 pb-2"><a href="https://github.com/milanpetrovic">Github Repos</a></span>
-                    </li>
-                    <li class="flex items-center">
-                        <i class="fab fa-linkedin gold"></i>
-                        <span class="pl-2"><a href="https://www.linkedin.com/in/milan-mushin/">LinkedIn</a></span>
-                    </li>
-                </ul>
 
-                <h2 class="py-4 uppercase border-b-2 border-t-2 border-gray-700 mb-6 text-center font-semibold tracking-wider">Skills</h2>
-                <div class="knowledge__skills">
-                    <ul class="flex flex-wrap justify-center items-center pb-2">
-                        <li>Design Patterns</li>
-                        <li>Algorithms</li>
-                        <li>Data Structures</li>
-                        <li>PHP</li>
-                        <li>JavaScript (ES6, ES7)</li>
-                        <li>Laravel</li>
-                        <li>Git / Github</li>
-                        <li>React</li>
-                        <li>Node.js</li>
-                        <li>Express</li>
-                        <li>MySQL</li>
-                        <li>PostgreSQL</li>
-                        <li>MongoDB</li>
-                        <li>Firebase</li>
-                        <li>GraphQL</li>
-                        <li>Linux</li>
-                        <li>CSS</li>
-                        <li>Responsive</li>
-                        <li>Tailwind</li>
-                    </ul>
-                </div>
 
-                <h2 class="py-4 uppercase border-b-2 border-t-2 border-gray-700 my-6 text-center font-semibold tracking-wider">Languages</h2>
-                <div class="knowledge__langs">
-                    <div class="knowledge__langs-section mb-6">
-                        <p class="font-semibold">English - Advanced level</p>
+
+
+    <div class="">
+  
+        <main class="py-8">
+            <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:max-w-7xl lg:px-8">
+              <h1 class="sr-only">Fullstack Web Developer Milan Petrovic</h1>
+              <div class="grid mx-auto pb-12">
+
+                <!-- Professional Profile -->
+                <section class="bg-white dark:bg-slate-800 rounded-lg drop-shadow-lg print:drop-shadow-none p-6 lg:p-8 flex flex-col lg:flex-row items-center">
+                  <div class="flex flex-col justify-center items-center">
+                    <span class="inline-block relative">
+                        <img class="h-48 w-48 rounded-full" src="assets/img/milan.jpeg" alt="Fullstack Web Developer Milan Petrovic">
+                        <span class="absolute bottom-3 right-3 block h-8 w-8 rounded-full ring-2 ring-white bg-green-400"></span>
+                    </span>
+                  </div>
+                  <div class="flex-1 lg:ml-8 mt-8 lg:mt-0">
+                    <h1 class="text-3xl font-bold tracking-wider mb-0 text-center lg:text-left text-gray-800 dark:text-white">Milan Petrovic</h1>
+                    <h2 class="text-xl mb-4 text-center lg:text-left dark:text-gray-200">Fullstack Web Developer</h2>
+                    <div class="text-base text-slate-500 dark:text-slate-400">
+                        <p class="mb-3">Self-motivated and self-taught full-stack web developer with a passion for learning with an endless supply of optimism and curiosity. An expert at PHP / WordPress / Front-End development, having spent 7 years developing websites and web apps for numerous clients across the globe.</p>
+
+                        <p>Currently growing increasingly comfortable and familiar with MERN stack by learning from seasoned developers and by pushing my coding skills while developing real-world apps. My objective is to simply become the best web developer I can possibly be.</p>
                     </div>
+                    
+                  </div>
+                </section>
+                
 
-                    <div class="knowledge__langs-section">
-                        <p class="font-semibold">German - Beginner level</p>
-                    </div>
-                </div>
-            </div>
+              </div>
 
-            <div class="work order-1 md:order-2 md:pl-8">
-                <h2 class="py-4 uppercase border-b-2 border-t-2 md:border-t-0 border-gray-700 mb-6 text-center font-semibold tracking-wider">Work Experience</h2>
-
-                <div class="work__position mb-6">
-                    <h3 class="font-semibold">Freelance Web Developer</h3>
-                    <span class="inline-block pb-2 font-semibold italic">2013-present</span>
-                    <ul class="list-disc pl-6">
-                        <li>Effectively managed project, using SCRUM development process to properly track and analyze project development and target areas of group success and improvement. Organized project using Slack</li>
-                        <li>Built websites for clients using HTML5, CSS3, JavaScript, Bootstrap, APIs, and WordPress</li>
-                        <li>Collaborated closely with clients, both remotely and in-person, to bring their ideas to life</li>
-                        <li>Completed full-scale web projects for numerous startups, from design to development to launch</li>
-                        <li>Provided consulting, maintenance, and hosting services for clients</li>
-                        <li>Balanced multiple web development projects at once</li>
-                        <li>Redesigned static HTML-based web pages into responsive WordPress templates</li>
-                        <li>Utilized SEO methods to support the online presence of websites</li>
-                        <li>Guided clients through WordPress so that they can easily edit & update their websites after launch</li>
-                        <li>Communicated with clients one-on-one to make requested adjustments to the design & functionality of websites</li>
-                    </ul>
-                </div>
-
-                <div class="work__position mb-6">
-                    <h3 class="font-semibold">Full-stack Web Developer</h3>
-                    <span class="inline-block pb-2 font-semibold italic">Digital Silk / December 2020 - March 2021</span>
-                    <ul class="list-disc pl-6">
-                        <li>Developed fully custom website with a team of three in WordPress</li>
-                        <li>Lead developer responsible for updates and optimization on company website</li>
-                        <li>Developed custom video player and improved CLS on company website</li>
-                    </ul>
-                </div>
-
-                <div class="work__position mb-6">
-                    <h3 class="font-semibold">Lead Web Developer</h3>
-                    <span class="inline-block pb-2 font-semibold italic">Blackghost Website & Media Design / 2017-2018</span>
-                    <ul class="list-disc pl-6">
-                        <li>Designed and developed websites for <a href="http://knighter.net/">David Knight</a> and <a href="http://fastlane.im/">Fastlane</a></li>
-                        <li>Worked on multiple other projects during the term, developing bespoke WordPress websites, fixing errors in existing websites, making improvements by applying responsive design, optimizing speed performance, hosting and server management</li>
-                    </ul>   
-                </div>
-
-                <div class="work__position">
-                    <h3 class="font-semibold">Web Developer / IT Consultant</h3>
-                    <span class="inline-block pb-2 font-semibold italic">MarketLeverage Interactive Advertising, Inc. / 2015-2016</span>
-                    <ul class="list-disc pl-6">
-                        <li>Design & Development of a fully bespoke law firm website for <a href="https://byrdcampbell.com/">Byrd Campbell, P.A.</a></li>
-                        <li>Developed website for <a href="https://legioncapital.com/">Legion Capital Corp</a> based on a provided mockup</li>
-                        <li>Design and development of e-commerce website for Nautical Expressions</li>
-                    </ul>
-                </div>
-
-                <h2 class="py-4 uppercase border-b-2 border-t-2 border-gray-700 my-6 text-center font-semibold tracking-wider">Education</h2>
-                <div class="knowledge__edu">
-                    <div class="knowledge__edu-section mb-6">
-                        <p class="font-semibold">Online Programming Courses</p>
-                        <div class="school font-semibold italic">Udemy / Laracasts</div>
-                        <span>Ongoing</span>
-                    </div>
-                    <div class="knowledge__edu-section mb-6">
-                        <p class="font-semibold">Certified PHP Web Developer</p>
-                        <div class="school font-semibold italic">IT Academy</div>
-                        <span>2016-2017</span>
-                    </div>
-                    <div class="knowledge__edu-section mb-6">
-                        <p class="font-semibold">Automation Technician</p>
-                        <div class="school font-semibold italic">ESTS "Nikola Tesla"</div>
-                        <span>2000-2004</span>
-                    </div>
-                </div>
-
+              <div class="grid grid-cols-1 gap-4 items-start lg:grid-cols-3 lg:gap-8">
+                <!-- Sidebar -->
+                <div class="grid grid-cols-1 gap-4 order-2 lg:order-1">
+                    <section aria-labelledby="section-2-title">
+                      <h2 class="sr-only" id="section-2-title">Section title</h2>
+                      <div class="rounded-lg bg-white overflow-hidden drop-shadow-lg">
+                        <div class="bg-white rounded-lg shadow-md p-6 lg:p-8">
+                          <h3 class="text-lg font-semibold tracking-wider mb-6 text-center lg:text-left text-gray-800">Contact Info</h3>
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+        
+                <!-- Main Section -->
+                
+                <div class="grid grid-cols-1 gap-4 lg:col-span-2 order-1 lg:order-2">
+                    <section aria-labelledby="section-1-title">
+                      <h2 class="sr-only" id="section-1-title">Section title</h2>
+                      <div class="rounded-lg bg-white overflow-hidden drop-shadow-lg">
+                        <div class="bg-white rounded-lg shadow-md p-6 lg:p-8">
+                          <h3 class="text-lg font-semibold tracking-wider mb-6 text-center lg:text-left text-gray-800">Work Experience</h3>
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+              </div>
             </div>
         </main>
 
-        <footer class="bg-gray-800 text-gray-600 flex flex-col justify-center items-center text-center py-4 px-8">
-            Copyright &copy; Milan Petrovic 2020.
-        </footer>
+        <footer class="bg-gray-800 print:hidden">
+    <div class="max-w-7xl mx-auto py-8 px-4 sm:px-6 md:flex md:items-center md:justify-between lg:px-8">
+      <div class="flex justify-center space-x-6 md:order-2">
+  
+        <a href="https://github.com/milanpetrovic" class="text-gray-400 hover:text-gray-500">
+          <span class="sr-only">GitHub</span>
+          <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd" />
+          </svg>
+        </a>
+      </div>
+      <div class="mt-8 md:mt-0 md:order-1">
+        <p class="text-center text-sm text-gray-400">
+          &copy; 2022 Milan Petrovic. All rights reserved.
+        </p>
+      </div>
     </div>
+        </footer>
+  
+    </div>
+
+    <script src="assets/scripts/app.js"></script>
 </body>
 </html>
