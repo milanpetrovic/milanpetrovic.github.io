@@ -25,11 +25,11 @@
         }
     </script>
 </head>
-<body class="bg-gray-100 dark:bg-gray-900 print:bg-white">
+<body class="bg-zinc-50 dark:bg-black print:bg-white">
 
-    <header class="bg-white dark:bg-slate-800 w-full print:hidden">
+    <header class="bg-white dark:bg-zinc-900 w-full print:hidden">
         <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:max-w-7xl lg:px-8">
-            <div class="flex items-center justify-between py-4">
+            <div class="flex items-center justify-end py-4">
 
                 <div class="flex justify-end items-center space-x-2">
                   <span class="text-sm text-gray-600">
@@ -41,7 +41,7 @@
                     <input type="checkbox" name="" id="toggle" class="sr-only">
                     <label for="toggle" class="hover:cursor-pointer" aria-label="Toggle Dark Mode">
                       <div class="w-9 h-5 flex items-center bg-gray-300 dark:bg-slate-500 rounded-full p-1">
-                        <div class="toggle-dot w-4 h-4 bg-white dark:bg-slate-800 rounded-full shadow-md transform duration-300 ease-in-out"></div>
+                        <div class="toggle-dot w-4 h-4 bg-white dark:bg-zinc-900 rounded-full shadow-md transform duration-300 ease-in-out"></div>
                       </div>
                     </label>
                   </div>
@@ -50,6 +50,14 @@
                       <path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
                     </svg>
                   </span>
+
+                  <button onclick="window.print()">
+                    <span class="text-sm text-gray-600">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6.72 13.829c-.24.03-.48.062-.72.096m.72-.096a42.415 42.415 0 0110.56 0m-10.56 0L6.34 18m10.94-4.171c.24.03.48.062.72.096m-.72-.096L17.66 18m0 0l.229 2.523a1.125 1.125 0 01-1.12 1.227H7.231c-.662 0-1.18-.568-1.12-1.227L6.34 18m11.318 0h1.091A2.25 2.25 0 0021 15.75V9.456c0-1.081-.768-2.015-1.837-2.175a48.055 48.055 0 00-1.913-.247M6.34 18H5.25A2.25 2.25 0 013 15.75V9.456c0-1.081.768-2.015 1.837-2.175a48.041 48.041 0 011.913-.247m10.5 0a48.536 48.536 0 00-10.5 0m10.5 0V3.375c0-.621-.504-1.125-1.125-1.125h-8.25c-.621 0-1.125.504-1.125 1.125v3.659M18 10.5h.008v.008H18V10.5zm-3 0h.008v.008H15V10.5z" />
+                      </svg>                    
+                    </span>
+                  </button>
                 </div>
             </div>
         </div>
@@ -67,7 +75,7 @@
               <div class="grid mx-auto pb-12">
 
                 <!-- Professional Profile -->
-                <section class="bg-white dark:bg-slate-800 rounded-lg drop-shadow-lg print:drop-shadow-none p-6 lg:p-8 flex flex-col lg:flex-row items-center">
+                <section class="bg-white dark:bg-zinc-900 rounded-lg drop-shadow-lg p-6 lg:p-8 flex flex-col lg:flex-row items-center">
                   <div class="flex flex-col justify-center items-center">
                     <span class="inline-block relative">
                         <img class="h-48 w-48 rounded-full" src="assets/img/milan.jpeg" alt="Fullstack Web Developer Milan Petrovic">
@@ -75,9 +83,9 @@
                     </span>
                   </div>
                   <div class="flex-1 lg:ml-8 mt-8 lg:mt-0">
-                    <h1 class="text-3xl font-bold tracking-wider mb-0 text-center lg:text-left text-gray-800 dark:text-white">Milan Petrovic</h1>
-                    <h2 class="text-2xl mb-4 text-center lg:text-left dark:text-gray-200">Fullstack Web Developer</h2>
-                    <div class="text-base text-slate-500 dark:text-slate-400">
+                    <h1 class="text-3xl font-bold tracking-wider mb-0 text-center lg:text-left text-zinc-800 dark:text-zinc-100">Milan Petrovic</h1>
+                    <h2 class="text-2xl mb-4 text-center lg:text-left text-zinc-800 dark:text-zinc-200">Fullstack Web Developer</h2>
+                    <div class="text-base text-zinc-700 dark:text-zinc-400">
                         <p class="mb-3">Self-motivated and self-taught full-stack web developer with a passion for learning with an endless supply of optimism and curiosity. An expert at PHP / WordPress / Front-End development, having spent 7 years developing websites and web apps for numerous clients across the globe.</p>
 
                         <p>Currently growing increasingly comfortable and familiar with MERN stack by learning from seasoned developers and by pushing my coding skills while developing real-world apps. My objective is to simply become the best web developer I can possibly be.</p>
@@ -96,8 +104,8 @@
                     <!-- Contact Info -->
                     <section aria-labelledby="section-2-title" class="mb-8">
                       <h2 class="sr-only" id="section-2-title">Section title</h2>
-                      <div class="rounded-lg bg-white dark:bg-slate-800 overflow-hidden drop-shadow-lg">
-                        <div class="bg-white dark:bg-slate-800 rounded-lg shadow-md p-6 lg:p-8">
+                      <div class="rounded-lg bg-white dark:bg-zinc-900 overflow-hidden drop-shadow-lg">
+                        <div class="bg-white dark:bg-zinc-900 rounded-lg shadow-md p-6 lg:p-8">
                           <h3 class="text-xl font-semibold tracking-wider mb-6 text-center lg:text-left text-gray-800 dark:text-white">Contact Info</h3>
 
                           <div>
@@ -143,40 +151,40 @@
                     <!-- Skillset -->
                     <section aria-labelledby="section-2-title" class="mb-8">
                       <h2 class="sr-only" id="section-2-title">Skills & Tools</h2>
-                      <div class="rounded-lg bg-white dark:bg-slate-800 overflow-hidden drop-shadow-lg">
-                        <div class="bg-white dark:bg-slate-800 rounded-lg shadow-md p-6 lg:p-8">
+                      <div class="rounded-lg bg-white dark:bg-zinc-900 overflow-hidden drop-shadow-lg">
+                        <div class="bg-white dark:bg-zinc-900 rounded-lg shadow-md p-6 lg:p-8">
                           <h3 class="text-xl font-semibold tracking-wider mb-6 text-center lg:text-left text-gray-800 dark:text-white">Skills & Tools</h3>
 
                           <div>
                             <div class="mt-9">
-                              <div class="flex text-slate-500 dark:text-slate-900 flex-wrap">
-                                <span class="bg-slate-400 px-4 py-1 rounded-full m-2 text-xs">JavaScript (ES6, ES7)</span>
-                                <span class="bg-slate-400 px-4 py-1 rounded-full m-2 text-xs">Node.js</span>
-                                <span class="bg-slate-400 px-4 py-1 rounded-full m-2 text-xs">React</span>
-                                <span class="bg-slate-400 px-4 py-1 rounded-full m-2 text-xs">Typescript</span>
-                                <span class="bg-slate-400 px-4 py-1 rounded-full m-2 text-xs">Next.js</span>
-                                <span class="bg-slate-400 px-4 py-1 rounded-full m-2 text-xs">Gatsby.js</span>
-                                <span class="bg-slate-400 px-4 py-1 rounded-full m-2 text-xs">Express</span>
-                                <span class="bg-slate-400 px-4 py-1 rounded-full m-2 text-xs">JWT</span>
-                                <span class="bg-slate-400 px-4 py-1 rounded-full m-2 text-xs">GraphQL</span>
-                                <span class="bg-slate-400 px-4 py-1 rounded-full m-2 text-xs">Alpine JS</span>
-                                <span class="bg-slate-400 px-4 py-1 rounded-full m-2 text-xs">PHP</span>
-                                <span class="bg-slate-400 px-4 py-1 rounded-full m-2 text-xs">Laravel</span>
-                                <span class="bg-slate-400 px-4 py-1 rounded-full m-2 text-xs">MongoDB</span>
-                                <span class="bg-slate-400 px-4 py-1 rounded-full m-2 text-xs">MySQL</span>
-                                <span class="bg-slate-400 px-4 py-1 rounded-full m-2 text-xs">Firebase</span>
-                                <span class="bg-slate-400 px-4 py-1 rounded-full m-2 text-xs">Linux</span>
-                                <span class="bg-slate-400 px-4 py-1 rounded-full m-2 text-xs">Algorithms</span>
-                                <span class="bg-slate-400 px-4 py-1 rounded-full m-2 text-xs">Data Structures</span>
-                                <span class="bg-slate-400 px-4 py-1 rounded-full m-2 text-xs">Tailwind</span>
-                                <span class="bg-slate-400 px-4 py-1 rounded-full m-2 text-xs">CSS</span>
-                                <span class="bg-slate-400 px-4 py-1 rounded-full m-2 text-xs">Git / Github</span>
-                                <span class="bg-slate-400 px-4 py-1 rounded-full m-2 text-xs">JIRA</span>
-                                <span class="bg-slate-400 px-4 py-1 rounded-full m-2 text-xs">SCRUM</span>
-                                <span class="bg-slate-400 px-4 py-1 rounded-full m-2 text-xs">Docker</span>
-                                <span class="bg-slate-400 px-4 py-1 rounded-full m-2 text-xs">AWS</span>
-                                <span class="bg-slate-400 px-4 py-1 rounded-full m-2 text-xs">Shopify</span>
-                                <span class="bg-slate-400 px-4 py-1 rounded-full m-2 text-xs">WordPress</span>
+                              <div class="flex dark:text-slate-900 flex-wrap text-sm">
+                                <span class="dark:bg-slate-400 shadow-md dark:shadow-none px-4 py-1 rounded-full m-2">JavaScript (ES6, ES7)</span>
+                                <span class="dark:bg-slate-400 shadow-md dark:shadow-none px-4 py-1 rounded-full m-2">Node.js</span>
+                                <span class="dark:bg-slate-400 shadow-md dark:shadow-none px-4 py-1 rounded-full m-2">React</span>
+                                <span class="dark:bg-slate-400 shadow-md dark:shadow-none px-4 py-1 rounded-full m-2">Typescript</span>
+                                <span class="dark:bg-slate-400 shadow-md dark:shadow-none px-4 py-1 rounded-full m-2">Next.js</span>
+                                <span class="dark:bg-slate-400 shadow-md dark:shadow-none px-4 py-1 rounded-full m-2">Gatsby.js</span>
+                                <span class="dark:bg-slate-400 shadow-md dark:shadow-none px-4 py-1 rounded-full m-2">Express</span>
+                                <span class="dark:bg-slate-400 shadow-md dark:shadow-none px-4 py-1 rounded-full m-2">JWT</span>
+                                <span class="dark:bg-slate-400 shadow-md dark:shadow-none px-4 py-1 rounded-full m-2">GraphQL</span>
+                                <span class="dark:bg-slate-400 shadow-md dark:shadow-none px-4 py-1 rounded-full m-2">Alpine JS</span>
+                                <span class="dark:bg-slate-400 shadow-md dark:shadow-none px-4 py-1 rounded-full m-2">PHP</span>
+                                <span class="dark:bg-slate-400 shadow-md dark:shadow-none px-4 py-1 rounded-full m-2">Laravel</span>
+                                <span class="dark:bg-slate-400 shadow-md dark:shadow-none px-4 py-1 rounded-full m-2">MongoDB</span>
+                                <span class="dark:bg-slate-400 shadow-md dark:shadow-none px-4 py-1 rounded-full m-2">MySQL</span>
+                                <span class="dark:bg-slate-400 shadow-md dark:shadow-none px-4 py-1 rounded-full m-2">Firebase</span>
+                                <span class="dark:bg-slate-400 shadow-md dark:shadow-none px-4 py-1 rounded-full m-2">Linux</span>
+                                <span class="dark:bg-slate-400 shadow-md dark:shadow-none px-4 py-1 rounded-full m-2">Algorithms</span>
+                                <span class="dark:bg-slate-400 shadow-md dark:shadow-none px-4 py-1 rounded-full m-2">Data Structures</span>
+                                <span class="dark:bg-slate-400 shadow-md dark:shadow-none px-4 py-1 rounded-full m-2">Tailwind</span>
+                                <span class="dark:bg-slate-400 shadow-md dark:shadow-none px-4 py-1 rounded-full m-2">CSS</span>
+                                <span class="dark:bg-slate-400 shadow-md dark:shadow-none px-4 py-1 rounded-full m-2">Git / Github</span>
+                                <span class="dark:bg-slate-400 shadow-md dark:shadow-none px-4 py-1 rounded-full m-2">JIRA</span>
+                                <span class="dark:bg-slate-400 shadow-md dark:shadow-none px-4 py-1 rounded-full m-2">SCRUM</span>
+                                <span class="dark:bg-slate-400 shadow-md dark:shadow-none px-4 py-1 rounded-full m-2">Docker</span>
+                                <span class="dark:bg-slate-400 shadow-md dark:shadow-none px-4 py-1 rounded-full m-2">AWS</span>
+                                <span class="dark:bg-slate-400 shadow-md dark:shadow-none px-4 py-1 rounded-full m-2">Shopify</span>
+                                <span class="dark:bg-slate-400 shadow-md dark:shadow-none px-4 py-1 rounded-full m-2">WordPress</span>
                                 
                               </div>
                             </div>
@@ -188,8 +196,8 @@
                     <!-- Languages -->
                     <section aria-labelledby="section-2-title" class="mb-8">
                       <h2 class="sr-only" id="section-2-title">Languages</h2>
-                      <div class="rounded-lg bg-white dark:bg-slate-800 overflow-hidden drop-shadow-lg">
-                        <div class="bg-white dark:bg-slate-800 rounded-lg shadow-md p-6 lg:p-8">
+                      <div class="rounded-lg bg-white dark:bg-zinc-900 overflow-hidden drop-shadow-lg">
+                        <div class="bg-white dark:bg-zinc-900 rounded-lg shadow-md p-6 lg:p-8">
                           <h3 class="text-xl font-semibold tracking-wider mb-6 text-center lg:text-left text-gray-800 dark:text-white">Languages</h3>
 
                           <div>
@@ -207,8 +215,8 @@
                     <!-- Hobbies -->
                     <section aria-labelledby="section-2-title" class="mb-8">
                       <h2 class="sr-only" id="section-2-title">Hobbies</h2>
-                      <div class="rounded-lg bg-white dark:bg-slate-800 overflow-hidden drop-shadow-lg">
-                        <div class="bg-white dark:bg-slate-800 rounded-lg shadow-md p-6 lg:p-8">
+                      <div class="rounded-lg bg-white dark:bg-zinc-900 overflow-hidden drop-shadow-lg">
+                        <div class="bg-white dark:bg-zinc-900 rounded-lg shadow-md p-6 lg:p-8">
                           <h3 class="text-xl font-semibold tracking-wider mb-6 text-center lg:text-left text-gray-800 dark:text-white">Hobbies</h3>
 
                           <div>
@@ -233,19 +241,19 @@
                 <div class="grid grid-cols-1 gap-4 lg:col-span-2 order-1 lg:order-2">
                     <section aria-labelledby="section-1-title" class="pb-8">
                       <h2 class="sr-only" id="section-1-title">Section title</h2>
-                      <div class="rounded-lg bg-white dark:bg-slate-800 overflow-hidden drop-shadow-lg">
-                        <div class="bg-white dark:bg-slate-800 rounded-lg shadow-md p-6 lg:p-8">
+                      <div class="rounded-lg bg-white dark:bg-zinc-900 overflow-hidden drop-shadow-lg">
+                        <div class="bg-white dark:bg-zinc-900 rounded-lg shadow-md p-6 lg:p-8 space-y-6 divide-y divide-zinc-200 dark:divide-zinc-800">
                           <h3 class="text-xl font-semibold tracking-wider mb-6 text-center lg:text-left text-gray-800 dark:text-white">Work Experience</h3>
 
-                          <div class="mb-6">
+                          <div class="mb-6 pt-6">
                             <h4 class="text-lg dark:text-gray-200">Fullstack Web Developer</h4>
-                            <span class="italic dark:text-gray-400">Holycode / Swiss Organic Partners AG</span>
+                            <span class="italic text-zinc-400 dark:text-zinc-500">Holycode / Swiss Organic Partners AG</span>
                           </div>
 
-                          <div class="mb-6 text-slate-500 dark:text-slate-400">
+                          <div class="mb-6 pt-6">
                             <h4 class="text-lg dark:text-gray-200">Freelance Web Developer</h4>
-                            <span class="italic dark:text-gray-400">2013-2021</span>
-                            <ul role="list" class="list-disc ml-6 mt-2">
+                            <span class="italic text-zinc-400 dark:text-zinc-500">2013-2021</span>
+                            <ul role="list" class="list-disc ml-6 mt-2 text-zinc-700 dark:text-zinc-400">
                               <li>Effectively managed project, using SCRUM development process to properly track and analyze project development and target areas of group success and improvement. Organized project using Slack.</li>
                               <li>Built websites for clients using HTML5, CSS3, JavaScript, Bootstrap, APIs, and WordPress.</li>
                               <li>Collaborated closely with clients, both remotely and in-person, to bring their ideas to life.</li>
@@ -259,29 +267,29 @@
                             </ul>
                           </div>
 
-                          <div class="mb-6 text-slate-500 dark:text-slate-400">
+                          <div class="mb-6 pt-6">
                             <h4 class="text-lg dark:text-gray-200">Fullstack Web Developer</h4>
-                            <span class="italic dark:text-gray-400">Digital Silk / December 2020 - March 2021</span>
-                            <ul role="list" class="list-disc ml-6 mt-2">
+                            <span class="italic text-zinc-400 dark:text-zinc-500">Digital Silk / December 2020 - March 2021</span>
+                            <ul role="list" class="list-disc ml-6 mt-2 text-zinc-700 dark:text-zinc-400">
                               <li>Developed fully custom website with a team of three in WordPress.</li>
                               <li>Lead developer responsible for updates and optimization on company website.</li>
                               <li>Developed custom video player and improved Web Vitals score on company website.</li>
                             </ul>
                           </div>
 
-                          <div class="mb-6 text-slate-500 dark:text-slate-400">
+                          <div class="mb-6 pt-6">
                             <h4 class="text-lg dark:text-gray-200">Lead Web Developer</h4>
-                            <span class="italic dark:text-gray-400">Blackghost Website & Media Design / 2017-2018</span>
-                            <ul role="list" class="list-disc ml-6 mt-2">
+                            <span class="italic text-zinc-400 dark:text-zinc-500">Blackghost Website & Media Design / 2017-2018</span>
+                            <ul role="list" class="list-disc ml-6 mt-2 text-zinc-700 dark:text-zinc-400">
                               <li>Designed and developed websites for <strong>David Knight</strong> and <strong>Fastlane</strong></li>
                               <li>Worked on multiple other projects during the term, developing bespoke WordPress websites, fixing errors in existing websites, making improvements by applying responsive design, optimizing speed performance, hosting and server management</li>
                             </ul>
                           </div>
 
-                          <div class="text-slate-500 dark:text-slate-400">
+                          <div class="pt-6">
                             <h4 class="text-lg dark:text-gray-200">Web Developer / IT Consultant</h4>
-                            <span class="italic dark:text-gray-400">MarketLeverage Interactive Advertising, Inc. / 2015-2016</span>
-                            <ul role="list" class="list-disc ml-6 mt-2">
+                            <span class="italic text-zinc-400 dark:text-zinc-500">MarketLeverage Interactive Advertising, Inc. / 2015-2016</span>
+                            <ul role="list" class="list-disc ml-6 mt-2 text-zinc-700 dark:text-zinc-400">
                               <li>Design & Development of a fully bespoke law firm website for <strong>Byrd Campbell, P.A.</strong></li>
                               <li>Developed website for <strong>Legion Capital Corp</strong> based on a provided mockup</li>
                               <li>Design and development of e-commerce website for <strong>Nautical Expressions</strong></li>
@@ -294,8 +302,8 @@
 
                     <section aria-labelledby="section-1-title">
                       <h2 class="sr-only" id="section-1-title">Education</h2>
-                      <div class="rounded-lg bg-white dark:bg-slate-800 overflow-hidden drop-shadow-lg">
-                        <div class="bg-white dark:bg-slate-800 rounded-lg shadow-md p-6 lg:p-8">
+                      <div class="rounded-lg bg-white dark:bg-zinc-900 overflow-hidden drop-shadow-lg">
+                        <div class="bg-white dark:bg-zinc-900 rounded-lg shadow-md p-6 lg:p-8">
                           <h3 class="text-xl font-semibold tracking-wider mb-6 text-center lg:text-left text-gray-800 dark:text-white">Education</h3>
 
                           <div class="mb-6">
@@ -323,7 +331,7 @@
             </div>
         </main>
 
-        <footer class="bg-white dark:bg-slate-800 print:hidden">
+        <footer class="bg-white dark:bg-zinc-900 print:hidden">
           <div class="max-w-7xl mx-auto py-4 flex items-center justify-center">
             <p class="text-center text-sm text-gray-700 dark:text-gray-400">
               &copy; 2022 Milan Petrovic. All rights reserved.
