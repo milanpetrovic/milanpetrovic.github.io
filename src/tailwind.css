@@ -1,0 +1,25 @@
+@tailwind base;
+
+#toggle:checked ~ label .toggle-dot {
+    @apply translate-x-3;
+}
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+	font-family: 'ScandiaWeb';
+    src: url('../ScandiaWebRegular.woff2') format('woff2'),
+         url('../ScandiaWebRegular.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'ScandiaWeb';
+    src: url('../ScandiaWebMedium.woff2') format('woff2'),
+         url('../ScandiaWebMedium.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
