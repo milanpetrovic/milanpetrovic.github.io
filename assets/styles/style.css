@@ -53,6 +53,10 @@ body {
     margin-right: 0.5em;
 }
 
+.Reference {
+    color: black !important;
+}
+
 @media only screen and (max-width: 81.25em) { 
     
 }
