@@ -8,7 +8,7 @@ module.exports = {
   theme: {
     extend: {},
     fontFamily: {
-      'sans' : ['ScandiaWeb', 'sans-serif']
+      'sans' : ['sans-serif']
     }
   },
   plugins: [],
