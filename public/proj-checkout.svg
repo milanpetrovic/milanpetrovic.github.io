@@ -1,0 +1,30 @@
+<svg viewBox="0 0 640 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Planted Checkout Extensions preview">
+  <defs>
+    <linearGradient id="cg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#eef6e6"/>
+      <stop offset="1" stop-color="#d8ecc5"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="400" fill="url(#cg)"/>
+  <!-- browser frame -->
+  <rect x="80" y="64" width="480" height="272" rx="10" fill="#ffffff" stroke="#bcd49e" stroke-width="2"/>
+  <rect x="80" y="64" width="480" height="36" rx="10" fill="#f0f7e8"/>
+  <circle cx="104" cy="82" r="5" fill="#95bf47"/>
+  <circle cx="122" cy="82" r="5" fill="#cfe2b3"/>
+  <circle cx="140" cy="82" r="5" fill="#cfe2b3"/>
+  <!-- checkout fields -->
+  <rect x="112" y="128" width="200" height="14" rx="3" fill="#2f4a18"/>
+  <rect x="112" y="160" width="260" height="34" rx="6" fill="#f3f8ec" stroke="#bcd49e" stroke-width="1.5"/>
+  <rect x="112" y="206" width="260" height="34" rx="6" fill="#f3f8ec" stroke="#bcd49e" stroke-width="1.5"/>
+  <rect x="112" y="262" width="150" height="40" rx="8" fill="#95bf47"/>
+  <rect x="138" y="278" width="98" height="9" rx="4" fill="#2f4a18"/>
+  <!-- order summary panel -->
+  <rect x="396" y="128" width="148" height="176" rx="8" fill="#f0f7e8" stroke="#bcd49e" stroke-width="1.5"/>
+  <rect x="416" y="150" width="80" height="10" rx="4" fill="#6f8f4c"/>
+  <rect x="416" y="178" width="108" height="8" rx="4" fill="#bcd49e"/>
+  <rect x="416" y="198" width="92" height="8" rx="4" fill="#bcd49e"/>
+  <rect x="416" y="218" width="108" height="8" rx="4" fill="#bcd49e"/>
+  <line x1="416" y1="246" x2="524" y2="246" stroke="#bcd49e" stroke-width="1.5"/>
+  <rect x="416" y="262" width="64" height="12" rx="4" fill="#2f4a18"/>
+  <text x="320" y="372" text-anchor="middle" font-family="system-ui, sans-serif" font-size="17" font-weight="700" fill="#3f5a22">Checkout UI Extensions · Shopify Plus</text>
+</svg>

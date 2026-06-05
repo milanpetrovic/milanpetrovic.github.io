@@ -1,0 +1,32 @@
+<svg viewBox="0 0 640 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="AI Support Chat Integration preview">
+  <defs>
+    <linearGradient id="ag" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#eef1fb"/>
+      <stop offset="1" stop-color="#dde4f6"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="400" fill="url(#ag)"/>
+  <!-- chat window -->
+  <rect x="176" y="56" width="288" height="288" rx="14" fill="#ffffff" stroke="#b9c6ec" stroke-width="2"/>
+  <rect x="176" y="56" width="288" height="48" rx="14" fill="#5b73c4"/>
+  <circle cx="206" cy="80" r="11" fill="#ffffff" opacity="0.9"/>
+  <path d="M201 80a5 5 0 0 1 10 0" fill="none" stroke="#5b73c4" stroke-width="2"/>
+  <rect x="226" y="74" width="96" height="11" rx="5" fill="#ffffff"/>
+  <!-- incoming bubble -->
+  <rect x="200" y="130" width="170" height="42" rx="12" fill="#eef1fb"/>
+  <rect x="216" y="144" width="120" height="7" rx="3" fill="#9aa9d8"/>
+  <rect x="216" y="156" width="86" height="7" rx="3" fill="#9aa9d8"/>
+  <!-- outgoing bubble -->
+  <rect x="278" y="186" width="162" height="42" rx="12" fill="#f6d99f"/>
+  <rect x="294" y="200" width="120" height="7" rx="3" fill="#b88a2f"/>
+  <rect x="294" y="212" width="78" height="7" rx="3" fill="#b88a2f"/>
+  <!-- incoming bubble 2 -->
+  <rect x="200" y="242" width="150" height="42" rx="12" fill="#eef1fb"/>
+  <rect x="216" y="256" width="104" height="7" rx="3" fill="#9aa9d8"/>
+  <rect x="216" y="268" width="70" height="7" rx="3" fill="#9aa9d8"/>
+  <!-- input -->
+  <rect x="200" y="300" width="240" height="30" rx="15" fill="#f1f4fc" stroke="#b9c6ec" stroke-width="1.5"/>
+  <circle cx="424" cy="315" r="11" fill="#5b73c4"/>
+  <path d="M419 315h10M425 311l4 4-4 4" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="320" y="376" text-anchor="middle" font-family="system-ui, sans-serif" font-size="17" font-weight="700" fill="#3c4a82">GPT + Azure · Conversational Support</text>
+</svg>

@@ -1,326 +1,657 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fullstack Web Developer Milan Petrovic</title>
-    <meta name="description" content="Self-motivated and self-taught full-stack web developer with a passion for learning with an endless supply of optimism and curiosity.">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Milan Petrovic — Fullstack Web Developer &amp; Shopify Specialist</title>
+    <meta name="description"
+        content="Milan Petrovic is a fullstack web developer specialising in Shopify, Shopify Plus, React, and Remix, with three years of e-commerce experience building fast, polished web apps." />
+    <meta name="author" content="Milan Petrovic" />
+    <meta name="robots" content="index, follow" />
+    <meta name="keywords"
+        content="Milan Petrovic, fullstack web developer, Shopify developer, Shopify Plus, React, Remix, Tailwind CSS, frontend developer, e-commerce" />
+    <link rel="canonical" href="https://milanpetrovic.dev/" />
+    <meta name="theme-color" content="#faf9f5" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#14110c" media="(prefers-color-scheme: dark)" />
 
-    <!-- Scandia Font -->
-    <link rel="preload" href="/assets/ScandiaWebMedium.woff" as="font" type="font/woff" crossorigin>
-    <link rel="preload" href="/assets/ScandiaWebMedium.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="/assets/ScandiaWebRegular.woff" as="font" type="font/woff" crossorigin>
-    <link rel="preload" href="/assets/ScandiaWebRegular.woff2" as="font" type="font/woff2" crossorigin>
+    <meta property="og:type" content="profile" />
+    <meta property="og:site_name" content="Milan Petrovic" />
+    <meta property="og:url" content="https://milanpetrovic.dev/" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:title" content="Milan Petrovic — Fullstack Web Developer &amp; Shopify Specialist" />
+    <meta property="og:description"
+        content="Fullstack web developer specialising in Shopify, Shopify Plus, React, and Remix, building fast, polished web apps." />
+    <meta property="og:image" content="https://milanpetrovic.dev/milan.jpeg" />
+    <meta property="og:image:alt" content="Portrait of Milan Petrovic" />
+    <meta property="profile:first_name" content="Milan" />
+    <meta property="profile:last_name" content="Petrovic" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Milan Petrovic — Fullstack Web Developer &amp; Shopify Specialist" />
+    <meta name="twitter:description"
+        content="Fullstack web developer specialising in Shopify, Shopify Plus, React, and Remix, building fast, polished web apps." />
+    <meta name="twitter:image" content="https://milanpetrovic.dev/milan.jpeg" />
+    <link rel="icon" type="image/jpeg" href="/milan.jpeg" />
 
-    <!-- Tailwind CSS -->
-    <link rel="stylesheet" href="assets/css/build.min.css">
-
-    <script>
-        // On page load or when changing themes, best to add inline in `head` to avoid FOUC
-        if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-            document.documentElement.classList.add('dark');
-        } else {
-            document.documentElement.classList.remove('dark')
+    <!-- Structured data for search engines & AI agents -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfilePage",
+      "dateModified": "2026-05-29",
+      "mainEntity": {
+        "@type": "Person",
+        "@id": "https://milanpetrovic.dev/#person",
+        "name": "Milan Petrovic",
+        "givenName": "Milan",
+        "familyName": "Petrovic",
+        "jobTitle": "Fullstack Web Developer",
+        "description": "Self-taught fullstack web developer specialising in Shopify, Shopify Plus, React, and Remix, with three years of e-commerce experience.",
+        "url": "https://milanpetrovic.dev/",
+        "image": "https://milanpetrovic.dev/milan.jpeg",
+        "email": "mailto:hello@milanpetrovic.dev",
+        "telephone": "+38162601422",
+        "sameAs": [
+          "https://github.com/milanpetrovic",
+          "https://www.linkedin.com/in/milan-mushin/"
+        ],
+        "knowsLanguage": ["English", "German"],
+        "knowsAbout": [
+          "Shopify",
+          "Shopify Plus",
+          "Shopify Checkout Extensions",
+          "Liquid",
+          "JavaScript",
+          "React",
+          "Next.js",
+          "Remix.js",
+          "Tailwind CSS",
+          "Node.js",
+          "PHP",
+          "Laravel",
+          "Golang",
+          "GraphQL",
+          "REST APIs",
+          "OpenAI API",
+          "Rust"
+        ],
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Planted Foods AG"
+        },
+        "hasOccupation": {
+          "@type": "Occupation",
+          "name": "Software Engineer",
+          "occupationalCategory": "15-1254.00 Web Developers",
+          "skills": "Shopify Plus, React, Remix, Liquid, Golang, OpenAI API, Tailwind CSS"
         }
+      }
+    }
+    </script>
+
+    <!-- Set theme before first paint to avoid a flash -->
+    <script>
+        (function () {
+            try {
+                var saved = localStorage.getItem("theme");
+                var dark = saved
+                    ? saved === "dark"
+                    : window.matchMedia("(prefers-color-scheme: dark)").matches;
+                if (dark) document.documentElement.setAttribute("data-theme", "dark");
+            } catch (e) { }
+        })();
     </script>
 </head>
-<body class="bg-zinc-50 dark:bg-black print:bg-white">
 
-    <header class="bg-white dark:bg-zinc-900 w-full print:hidden drop-shadow-sm dark:ring-1 dark:ring-zinc-300/20 sm:sticky top-0 z-10">
-        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:max-w-7xl lg:px-8">
-            <div class="flex items-center justify-end py-4">
+<body>
+    <a href="#main" class="skip-link">Skip to content</a>
+    <div class="shell">
 
-                <div class="flex justify-end items-center space-x-2">
-                  <span class="text-sm text-gray-600">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
-                    </svg>
-                  </span>
-                  <div>
-                    <input type="checkbox" name="" id="toggle" class="sr-only">
-                    <label for="toggle" class="hover:cursor-pointer" aria-label="Toggle Dark Mode">
-                      <div class="w-9 h-5 flex items-center bg-gray-300 dark:bg-slate-500 rounded-full p-1">
-                        <div class="toggle-dot w-4 h-4 bg-white dark:bg-zinc-900 rounded-full shadow-md transform duration-300 ease-in-out"></div>
-                      </div>
-                    </label>
-                  </div>
-                  <span class="text-sm text-gray-600">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
-                    </svg>
-                  </span>
-                </div>
+        <!-- ============ NAV ============ -->
+        <nav class="nav" aria-label="Primary">
+            <a href="#top" class="nav-brand">
+                <span class="brand-logo" aria-hidden="true">
+                    <img src="/surface-mp.svg" alt="Milan Petrovic" width="32" height="32" />
+                </span>
+                Milan Petrovic
+            </a>
+            <div class="nav-links">
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#experience">Experience</a>
+                <a href="#projects">Projects</a>
+                <a href="#education">Education</a>
+                <a href="#testimonials">Testimonials</a>
             </div>
-        </div>
-    </header>
-
-
-
-
-    <div class="">
-  
-        <main class="py-8">
-            <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:max-w-7xl lg:px-8">
-              <h1 class="sr-only">Fullstack Web Developer Milan Petrovic</h1>
-              <div class="grid mx-auto pb-8">
-
-                <!-- Professional Profile -->
-                <section class="bg-white dark:bg-zinc-900 rounded-lg p-6 lg:p-8 flex flex-col lg:flex-row items-center drop-shadow-md dark:ring-1 dark:ring-zinc-300/20">
-                  <div class="flex flex-col justify-center items-center">
-                    <span class="inline-block relative">
-                        <img class="h-48 w-48 rounded-full" src="assets/img/milan.jpeg" alt="Fullstack Web Developer Milan Petrovic">
-                        <span class="absolute bottom-3 right-3 block h-8 w-8 rounded-full ring-2 ring-white dark:ring-zinc-300 bg-green-400"></span>
+            <div class="nav-actions">
+                <button type="button" class="theme-toggle" id="themeToggle" role="switch" aria-checked="false"
+                    aria-label="Toggle dark mode">
+                    <span class="tt-track" aria-hidden="true">
+                        <svg class="tt-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="4.2" />
+                            <path
+                                d="M12 2v2.5M12 19.5V22M4.22 4.22l1.77 1.77M18.01 18.01l1.77 1.77M2 12h2.5M19.5 12H22M4.22 19.78l1.77-1.77M18.01 5.99l1.77-1.77" />
+                        </svg>
+                        <svg class="tt-moon" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+                        </svg>
+                        <span class="tt-thumb"></span>
                     </span>
-                  </div>
-                  <div class="flex-1 lg:ml-8 mt-8 lg:mt-0">
-                    <h1 class="text-3xl font-bold tracking-wider mb-0 text-center lg:text-left text-zinc-800 dark:text-zinc-100">Milan Petrovic</h1>
-                    <h2 class="text-2xl mb-4 text-center lg:text-left text-zinc-800 dark:text-zinc-200">Fullstack Web Developer</h2>
-                    <div class="text-base text-zinc-700 dark:text-zinc-400">
-                      <p class="mb-3">As a dedicated frontend and Shopify developer with three years of specialized experience, I have honed my expertise in JavaScript frameworks such as React and Remix, and the Tailwind CSS framework.</p>
-
-                      <p class="mb-3">My technical proficiency extends to advanced Shopify development, including custom app creation and adept use of Shopify's Liquid templating language. Notably, I have spent a year working with Shopify Plus, managing complex projects and enhancing store functionalities for high-volume businesses.</p>
-                    </div>
-                    
-                  </div>
-                </section>
-                
-
-              </div>
-
-              <div class="grid grid-cols-1 gap-8 items-start lg:grid-cols-3">
-                <!-- Sidebar -->
-                <div class="grid grid-cols-1 gap-4 order-2 lg:order-1">
-                  <div>
-                    <!-- Contact Info -->
-                    <section aria-labelledby="section-2-title" class="mb-8">
-                      <h2 class="sr-only" id="section-2-title">Contact Info</h2>
-                      <div class="rounded-lg bg-white dark:bg-zinc-900 overflow-hidden drop-shadow-md dark:ring-1 dark:ring-zinc-300/20">
-                        <div class="bg-white dark:bg-zinc-900 rounded-lg shadow-md p-6 lg:p-8">
-                          <h3 class="text-xl font-semibold tracking-wider mb-6 text-center lg:text-left text-gray-800 dark:text-white">Contact Info</h3>
-
-                          <div>
-                            <div class="mt-9">
-                              <div class="flex">
-                                <div class="flex-shrink-0">
-                                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-600" fill="currentColor" stroke="currentColor" stroke-width="2" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M511.2 387l-23.25 100.8c-3.266 14.25-15.79 24.22-30.46 24.22C205.2 512 0 306.8 0 54.5c0-14.66 9.969-27.2 24.22-30.45l100.8-23.25C139.7-2.602 154.7 5.018 160.8 18.92l46.52 108.5c5.438 12.78 1.77 27.67-8.98 36.45L144.5 207.1c33.98 69.22 90.26 125.5 159.5 159.5l44.08-53.8c8.688-10.78 23.69-14.51 36.47-8.975l108.5 46.51C506.1 357.2 514.6 372.4 511.2 387z"/></svg>
-                                </div>
-                                <div class="ml-3 text-base dark:text-gray-200">
-                                  <p>+38162601422</p>
-                                </div>
-                              </div>
-                              <div class="mt-6 flex">
-                                <div class="flex-shrink-0">
-                                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-600" fill="currentColor" viewBox="0 0 512 512" stroke-width="2" stroke="currentColor" aria-hidden="true"><!--! Font Awesome Pro 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M464 64C490.5 64 512 85.49 512 112C512 127.1 504.9 141.3 492.8 150.4L275.2 313.6C263.8 322.1 248.2 322.1 236.8 313.6L19.2 150.4C7.113 141.3 0 127.1 0 112C0 85.49 21.49 64 48 64H464zM217.6 339.2C240.4 356.3 271.6 356.3 294.4 339.2L512 176V384C512 419.3 483.3 448 448 448H64C28.65 448 0 419.3 0 384V176L217.6 339.2z"/></svg>
-                                </div>
-                                <div class="ml-3 text-base dark:text-gray-200">
-                                  <p>hello@milanpetrovic.dev</p>
-                                </div>
-                              </div>
-                              <div class="mt-6 flex">
-                                <div class="flex-shrink-0">
-                                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" class="h-6 w-6 text-gray-600" fill="currentColor" stroke-width="2" stroke="currentColor" aria-hidden="true"><!--! Font Awesome Pro 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
-                                </div>
-                                <div class="ml-3 text-base dark:text-gray-200">
-                                  <p><a href="https://github.com/milanpetrovic">Github</a></p>
-                                </div>
-                              </div>
-                              <div class="mt-6 flex">
-                                <div class="flex-shrink-0">
-                                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-600" fill="currentColor" viewBox="0 0 448 512" stroke-width="2" stroke="currentColor" aria-hidden="true"><!--! Font Awesome Pro 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
-                                </div>
-                                <div class="ml-3 text-base dark:text-gray-200">
-                                  <p><a href="https://www.linkedin.com/in/milan-mushin/">LinkedIn</a></p>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </section>
-
-                    <!-- Skillset -->
-                    <section aria-labelledby="section-2-title" class="mb-8">
-                      <h2 class="sr-only" id="section-2-title">Skills & Tools</h2>
-                      <div class="rounded-lg bg-white dark:bg-zinc-900 overflow-hidden drop-shadow-md dark:ring-1 dark:ring-zinc-300/20">
-                        <div class="bg-white dark:bg-zinc-900 rounded-lg shadow-md p-6 lg:p-8">
-                          <h3 class="text-xl font-semibold tracking-wider mb-6 text-center lg:text-left text-gray-800 dark:text-white">Skills & Tools</h3>
-
-                          <div>
-                            <div class="mt-9">
-                              <div class="flex dark:text-gray-400 flex-wrap text-sm">
-                                <span class="dark:bg-zinc-700 shadow-md dark:shadow-none px-4 py-1 rounded-full m-2">Shopify</span>
-                                <span class="dark:bg-zinc-700 shadow-md dark:shadow-none px-4 py-1 rounded-full m-2">Shopify Plus</span>
-                                <span class="dark:bg-zinc-700 shadow-md dark:shadow-none px-4 py-1 rounded-full m-2">Shopify Checkout Extensions</span>
-                                <span class="dark:bg-zinc-700 shadow-md dark:shadow-none px-4 py-1 rounded-full m-2">Tailwind CSS</span>
-                                <span class="dark:bg-zinc-700 shadow-md dark:shadow-none px-4 py-1 rounded-full m-2">JavaScript (ES6+)</span>
-                                <span class="dark:bg-zinc-700 shadow-md dark:shadow-none px-4 py-1 rounded-full m-2">React</span>
-                                <span class="dark:bg-zinc-700 shadow-md dark:shadow-none px-4 py-1 rounded-full m-2">Next.js</span>
-                                <span class="dark:bg-zinc-700 shadow-md dark:shadow-none px-4 py-1 rounded-full m-2">Remix.js</span>
-                                <span class="dark:bg-zinc-700 shadow-md dark:shadow-none px-4 py-1 rounded-full m-2">REST API</span>
-                                <span class="dark:bg-zinc-700 shadow-md dark:shadow-none px-4 py-1 rounded-full m-2">GraphQL API</span>
-                                <span class="dark:bg-zinc-700 shadow-md dark:shadow-none px-4 py-1 rounded-full m-2">Liquid</span>
-                                <span class="dark:bg-zinc-700 shadow-md dark:shadow-none px-4 py-1 rounded-full m-2">Open AI API</span>
-                                <span class="dark:bg-zinc-700 shadow-md dark:shadow-none px-4 py-1 rounded-full m-2">Golang</span>
-                                <span class="dark:bg-zinc-700 shadow-md dark:shadow-none px-4 py-1 rounded-full m-2">WordPress</span>
-                                <span class="dark:bg-zinc-700 shadow-md dark:shadow-none px-4 py-1 rounded-full m-2">PHP</span>
-                                <span class="dark:bg-zinc-700 shadow-md dark:shadow-none px-4 py-1 rounded-full m-2">Laravel</span>
-                                <span class="dark:bg-zinc-700 shadow-md dark:shadow-none px-4 py-1 rounded-full m-2">Node.js</span>
-                                <span class="dark:bg-zinc-700 shadow-md dark:shadow-none px-4 py-1 rounded-full m-2">Express</span>
-                                <span class="dark:bg-zinc-700 shadow-md dark:shadow-none px-4 py-1 rounded-full m-2">Webpack</span>
-                                <span class="dark:bg-zinc-700 shadow-md dark:shadow-none px-4 py-1 rounded-full m-2">Vite</span>
-                                <span class="dark:bg-zinc-700 shadow-md dark:shadow-none px-4 py-1 rounded-full m-2">Git / Gitflow</span>
-                                <span class="dark:bg-zinc-700 shadow-md dark:shadow-none px-4 py-1 rounded-full m-2">Agile Software Development</span>
-                                <span class="dark:bg-zinc-700 shadow-md dark:shadow-none px-4 py-1 rounded-full m-2">Object-oriented Programming (OOP)</span>
-                                <span class="dark:bg-zinc-700 shadow-md dark:shadow-none px-4 py-1 rounded-full m-2">HTML 5</span>
-                                <span class="dark:bg-zinc-700 shadow-md dark:shadow-none px-4 py-1 rounded-full m-2">CSS 3</span>
-                                <span class="dark:bg-zinc-700 shadow-md dark:shadow-none px-4 py-1 rounded-full m-2">SCSS</span>
-                                <span class="dark:bg-zinc-700 shadow-md dark:shadow-none px-4 py-1 rounded-full m-2">PostCSS</span>
-                                <span class="dark:bg-zinc-700 shadow-md dark:shadow-none px-4 py-1 rounded-full m-2">MySQL</span>
-                                <span class="dark:bg-zinc-700 shadow-md dark:shadow-none px-4 py-1 rounded-full m-2">MariaDB</span>
-                                <span class="dark:bg-zinc-700 shadow-md dark:shadow-none px-4 py-1 rounded-full m-2">MongoDB</span>
-                                <span class="dark:bg-zinc-700 shadow-md dark:shadow-none px-4 py-1 rounded-full m-2">PostgreSQL</span>
-                                <span class="dark:bg-zinc-700 shadow-md dark:shadow-none px-4 py-1 rounded-full m-2">PHP Storm</span>
-                                <span class="dark:bg-zinc-700 shadow-md dark:shadow-none px-4 py-1 rounded-full m-2">Jira</span>
-                                <span class="dark:bg-zinc-700 shadow-md dark:shadow-none px-4 py-1 rounded-full m-2">Docker</span>
-                                <span class="dark:bg-zinc-700 shadow-md dark:shadow-none px-4 py-1 rounded-full m-2">AWS</span>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </section>
-
-                    <!-- Languages -->
-                    <section aria-labelledby="section-2-title" class="mb-8">
-                      <h2 class="sr-only" id="section-2-title">Languages</h2>
-                      <div class="rounded-lg bg-white dark:bg-zinc-900 overflow-hidden drop-shadow-md dark:ring-1 dark:ring-zinc-300/20">
-                        <div class="bg-white dark:bg-zinc-900 rounded-lg shadow-md p-6 lg:p-8">
-                          <h3 class="text-xl font-semibold tracking-wider mb-6 text-center lg:text-left text-gray-800 dark:text-white">Languages</h3>
-
-                          <div>
-                            <div class="mt-9">
-                              <div class="flex flex-col gap-2 text-zinc-700 dark:text-zinc-400">
-                                <p>English - Advanced level</p>
-                                <p>German - Beginner level</p>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </section>
-
-                    <!-- Hobbies -->
-                    <section aria-labelledby="section-2-title" class="mb-8">
-                      <h2 class="sr-only" id="section-2-title">Hobbies</h2>
-                      <div class="rounded-lg bg-white dark:bg-zinc-900 overflow-hidden drop-shadow-md dark:ring-1 dark:ring-zinc-300/20">
-                        <div class="bg-white dark:bg-zinc-900 rounded-lg shadow-md p-6 lg:p-8">
-                          <h3 class="text-xl font-semibold tracking-wider mb-6 text-center lg:text-left text-gray-800 dark:text-white">Hobbies</h3>
-
-                          <div>
-                            <div class="mt-9">
-                              <div class="flex flex-col gap-2 text-zinc-700 dark:text-zinc-400">
-                                <p>Cycling</p>
-                                <p>Long Hikes</p>
-                                <p>Outdoor Workouts</p>
-                                <p>Meditation</p>
-                                <p>Kendo</p>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </div>
-                
-        
-                <!-- Main Section -->
-                <div class="grid grid-cols-1 gap-8 lg:col-span-2 order-1 lg:order-2">
-                    <section aria-labelledby="section-1-title" class="">
-                      <h2 class="sr-only" id="section-1-title">Section title</h2>
-                      <div class="rounded-lg bg-white dark:bg-zinc-900 overflow-hidden drop-shadow-md dark:ring-1 dark:ring-zinc-300/20">
-                        <div class="bg-white dark:bg-zinc-900 rounded-lg shadow-md p-6 lg:p-8 space-y-6 divide-y divide-zinc-200 dark:divide-zinc-800">
-                          <h3 class="text-xl font-semibold tracking-wider mb-6 text-center lg:text-left text-gray-800 dark:text-white">Work Experience</h3>
-
-                          <div class="mb-6 pt-6">
-                            <h4 class="text-lg dark:text-gray-200 font-bold">Sofware Engineer</h4>
-                            <p class="italic text-slate-900 dark:text-zinc-500">Planted Foods AG / <span class="font-normal text-xs italic">May 2023 - present</span></p>
-                            <ul role="list" class="list-disc ml-6 mt-2 text-zinc-700 dark:text-zinc-400">
-                              <li>Directed end-to-end development of B2B and B2C webshops, leveraging Tailwind CSS for frontend redesigns, integrating modern design systems and coordinating with external developers to ensure a seamless user experience. Spearheaded extension development for postcode accessibility and delivery date management</li>
-                              <li>Developed two React-based Checkout UI extensions for Planted's B2B webshop, adding custom UI components for PO numbers and delivery dates. Adapted the webshop to use these extensions and modified a custom Go application to handle data transmission between Shopify and Business Central, leveraging the new extensions and metafields.</li>
-                              <li>Led the development of essential integrations, including a Golang custom connector, and managed API updates for Shopify platforms. Enhanced both B2B  and B2C webshop functionalities by ensuring compliance with the latest standards.</li>
-                              <li>Collaborated on the integration of AI technologies with OpenAI’s GPT and Azure, developing advanced chat functionalities to boost user engagement and support across web platforms.</li>
-                            </ul>
-                          </div>
-
-                          <div class="mb-6 pt-6">
-                            <h4 class="text-lg dark:text-gray-200 font-bold">Fullstack Web Developer</h4>
-                            <p class="text-slate-900 dark:text-zinc-500">Swiss Organic Partners AG / <span class="font-normal text-xs italic">April 2021 - March 2023</span></p>
-                            <ul role="list" class="list-disc ml-6 mt-2 text-zinc-700 dark:text-zinc-400">
-                                <li>Elevated e-commerce experiences by transitioning Shopify themes to OS 2.0, and automating deployments directly from GitHub to Shopify, enhancing operational efficiency.</li>
-                                <li>Crafted bespoke Shopify templates and interactive sections from tailored Figma designs, employing Tailwind CSS and Alpine JS for responsive and dynamic user interfaces.</li>
-                                <li>Orchestrated project management and development lifecycle utilizing the SCRUM framework, coupled with Jira for streamlined organization and progress tracking.</li>
-                                <li>Mentored and equipped an IT specialist with advanced technical skills, promoting team capability and knowledge sharing.</li>
-                                <li>Developed custom WordPress company website using ACF, enabling more high-quality leads generation.</li>
-                                <li>Developed WordPress plugin for custom block type.</li>
-                            </ul>
-                          </div>
-
-                          <div class="mb-6 pt-6">
-                            <h4 class="text-lg dark:text-gray-200 font-bold">Freelance Web Developer</h4>
-                            <p class="text-slate-900 dark:text-zinc-500">Remote / <span class="font-normal text-xs italic">2013-2021</span></p>
-                            <ul role="list" class="list-disc ml-6 mt-2 text-zinc-700 dark:text-zinc-400">
-                              <li>Spearheaded a variety of web development projects, leveraging SCRUM methodologies and collaboration tools to enhance team efficiency and achieve high client satisfaction.</li>
-                              <li>Upgraded online experiences by transforming traditional HTML sites into adaptive WordPress templates, optimizing for search engines, and facilitating content management systems for user autonomy post-deployment.</li>
-                              <li>Executed the end-to-end creation of dynamic web solutions using a suite of technologies (HTML5, CSS3, JavaScript, Bootstrap, APIs, WordPress), catering to diverse industry needs and project scopes.</li>
-                              <li>Provided a comprehensive array of web services encompassing consulting, site maintenance, and hosting management, with a commitment to delivering on time.</li>
-                              <li>Completed full-scale web projects for numerous startups, from design to development to launch.</li>
-                              <li>Collaborated closely with clients, both remotely and in-person, to bring their ideas to life.</li>
-                              <li>Communicated with clients one-on-one to make requested adjustments to the design & functionality of websites.</li>
-                              <li>Utilized SEO methods to support the online presence of websites.</li>
-                            </ul>
-                          </div>
-                        </div>
-                    </div>
-                  </section>
-
-                    <section aria-labelledby="section-1-title">
-                      <h2 class="sr-only" id="section-1-title">Education</h2>
-                      <div class="rounded-lg bg-white dark:bg-zinc-900 overflow-hidden drop-shadow-md dark:ring-1 dark:ring-zinc-300/20">
-                        <div class="bg-white dark:bg-zinc-900 rounded-lg shadow-md p-6 lg:p-8">
-                          <h3 class="text-xl font-semibold tracking-wider mb-6 text-center lg:text-left text-gray-800 dark:text-white">Education</h3>
-
-                          <div class="mb-6">
-                            <h4 class="text-lg dark:text-gray-200">Online Programming Courses</h4>
-                            <span class="italic dark:text-gray-400">Udemy / Laracasts / ZTM Academy (2018 - Present)</span>
-                          </div>
-
-                          <div class="mb-6">
-                            <h4 class="text-lg dark:text-gray-200">Certified PHP Web Developer</h4>
-                            <span class="italic dark:text-gray-400">IT Academy (2016 - 2017)</span>
-                          </div>
-
-                          
-                        </div>
-                      </div>
-                    </section>
-                    
-                </div>
-              </div>
+                </button>
+                <a href="#contact" class="btn btn-honey btn-sm">
+                    <span>Get in touch</span>
+                    <span class="ico">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M5 12h14M13 6l6 6-6 6" />
+                        </svg>
+                    </span>
+                </a>
             </div>
+        </nav>
+
+        <main id="main">
+
+            <!-- ============ HERO ============ -->
+            <section id="top" class="section hero" aria-labelledby="hero-h">
+                <div class="hero-grid">
+                    <div class="avatar-wrap" data-animate="zoom">
+                        <span class="glow" aria-hidden="true"></span>
+                        <img class="avatar" src="/milan.jpeg" alt="Fullstack Web Developer Milan Petrovic" width="136"
+                            height="136" />
+                    </div>
+                    <p class="eyebrow" data-animate="from-bottom">Fullstack Web Developer</p>
+                    <h1 id="hero-h" data-animate="from-bottom">
+                        <span>Milan Petrovic</span>
+                        <span class="light">building fast, polished web apps.</span>
+                    </h1>
+                    <p class="lead max-w-2xl mt-3" data-animate="from-bottom">
+                        As a dedicated frontend and Shopify developer with three years of specialized experience, I have
+                        honed my expertise in JavaScript frameworks such as React and Remix, and the Tailwind CSS
+                        framework.
+                    </p>
+                    <div class="hero-cta" data-animate="from-bottom">
+                        <a href="#experience" class="btn btn-honey">
+                            <span>View experience</span>
+                            <span class="ico">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <path d="M12 5v14M6 13l6 6 6-6" />
+                                </svg>
+                            </span>
+                        </a>
+                        <a href="https://github.com/milanpetrovic" target="_blank" rel="noopener" class="btn btn-cream">
+                            <span>GitHub</span>
+                            <span class="ico">
+                                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                    <path
+                                        d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.49 0-.24-.01-.88-.01-1.73-2.78.62-3.37-1.37-3.37-1.37-.45-1.18-1.11-1.5-1.11-1.5-.91-.64.07-.63.07-.63 1 .07 1.53 1.06 1.53 1.06.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.06 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.71 0 0 .84-.28 2.75 1.05A9.36 9.36 0 0 1 12 6.84c.85 0 1.71.12 2.51.34 1.91-1.33 2.75-1.05 2.75-1.05.55 1.41.2 2.45.1 2.71.64.72 1.03 1.63 1.03 2.75 0 3.93-2.34 4.79-4.57 5.05.36.32.68.94.68 1.91 0 1.38-.01 2.49-.01 2.83 0 .27.18.6.69.49A10.02 10.02 0 0 0 22 12.25C22 6.58 17.52 2 12 2z" />
+                                </svg>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ============ ABOUT ============ -->
+            <section id="about" class="section" aria-labelledby="about-h">
+                <div class="section-head">
+                    <p class="eyebrow" data-animate="from-bottom">About</p>
+                    <h2 id="about-h" data-animate="from-bottom">A self-taught developer driven by curiosity</h2>
+                </div>
+                <div class="max-w-3xl mx-auto" data-animate="from-bottom">
+                    <p>
+                        My technical proficiency extends to advanced Shopify development, including custom app creation
+                        and adept use of Shopify's Liquid templating language. Notably, I have spent a year working with
+                        Shopify Plus, managing complex projects and enhancing store functionalities for high-volume
+                        businesses.
+                    </p>
+                </div>
+            </section>
+
+            <!-- ============ SKILLS & TOOLS ============ -->
+            <section id="skills" class="section" aria-labelledby="skills-h">
+                <div class="section-head">
+                    <p class="eyebrow" data-animate="from-bottom">Skills &amp; Tools</p>
+                    <h2 id="skills-h" data-animate="from-bottom">The stack I build with</h2>
+                </div>
+                <ul class="chips" data-stagger aria-label="Technical skills and tools">
+                    <li class="chip">Shopify</li>
+                    <li class="chip">Shopify Plus</li>
+                    <li class="chip">Shopify Checkout Extensions</li>
+                    <li class="chip">Tailwind CSS</li>
+                    <li class="chip">JavaScript (ES6+)</li>
+                    <li class="chip">React</li>
+                    <li class="chip">Next.js</li>
+                    <li class="chip">Remix.js</li>
+                    <li class="chip">REST API</li>
+                    <li class="chip">GraphQL API</li>
+                    <li class="chip">Liquid</li>
+                    <li class="chip">Open AI API</li>
+                    <li class="chip">Golang</li>
+                    <li class="chip">WordPress</li>
+                    <li class="chip">PHP</li>
+                    <li class="chip">Laravel</li>
+                    <li class="chip">Node.js</li>
+                    <li class="chip">Express</li>
+                    <li class="chip">Webpack</li>
+                    <li class="chip">Vite</li>
+                    <li class="chip">Git / Gitflow</li>
+                    <li class="chip">Agile Software Development</li>
+                    <li class="chip">Object-oriented Programming (OOP)</li>
+                    <li class="chip">HTML 5</li>
+                    <li class="chip">CSS 3</li>
+                    <li class="chip">SCSS</li>
+                    <li class="chip">PostCSS</li>
+                    <li class="chip">MySQL</li>
+                    <li class="chip">MariaDB</li>
+                    <li class="chip">MongoDB</li>
+                    <li class="chip">PostgreSQL</li>
+                    <li class="chip">PHP Storm</li>
+                    <li class="chip">Jira</li>
+                    <li class="chip">Docker</li>
+                    <li class="chip">AWS</li>
+                </ul>
+            </section>
+
+            <!-- ============ BEYOND CODE (languages + hobbies) ============ -->
+            <section class="section" aria-label="Languages and hobbies">
+                <div class="grid-2up max-w-[60rem]" data-stagger>
+                    <div class="frame tile">
+                        <span class="caps"></span>
+                        <span class="ico-badge">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <circle cx="12" cy="12" r="10" />
+                                <path d="M2 12h20M12 2a15.3 15.3 0 0 1 0 20M12 2a15.3 15.3 0 0 0 0 20" />
+                            </svg>
+                        </span>
+                        <h4>Languages</h4>
+                        <p class="muted mb-1.5">English — Advanced level</p>
+                        <p class="muted m-0">German — Beginner level</p>
+                    </div>
+                    <div class="frame tile">
+                        <span class="caps"></span>
+                        <span class="ico-badge">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <path
+                                    d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 1 0-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 0 0 0-7.78z" />
+                            </svg>
+                        </span>
+                        <h4>Hobbies</h4>
+                        <p class="muted m-0">Cycling · Long Hikes · Outdoor Workouts · Meditation · Kendo</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ============ WORK EXPERIENCE ============ -->
+            <section id="experience" class="section" aria-labelledby="experience-h">
+                <div class="section-head">
+                    <p class="eyebrow" data-animate="from-bottom">Work Experience</p>
+                    <h2 id="experience-h" data-animate="from-bottom">Where I've made an impact</h2>
+                </div>
+                <div class="timeline">
+                    <div class="tl-item" data-animate="from-left">
+                        <div class="tl-head">
+                            <h3>Sofware Engineer</h3>
+                            <span class="tl-meta">May 2023 – present</span>
+                        </div>
+                        <p class="tl-company">Planted Foods AG</p>
+                        <ul class="tl-list">
+                            <li>Directed end-to-end development of B2B and B2C webshops, leveraging Tailwind CSS for
+                                frontend redesigns, integrating modern design systems and coordinating with external
+                                developers to ensure a seamless user experience. Spearheaded extension development for
+                                postcode accessibility and delivery date management</li>
+                            <li>Developed two React-based Checkout UI extensions for Planted's B2B webshop, adding
+                                custom UI components for PO numbers and delivery dates. Adapted the webshop to use these
+                                extensions and modified a custom Go application to handle data transmission between
+                                Shopify and Business Central, leveraging the new extensions and metafields.</li>
+                            <li>Led the development of essential integrations, including a Golang custom connector, and
+                                managed API updates for Shopify platforms. Enhanced both B2B and B2C webshop
+                                functionalities by ensuring compliance with the latest standards.</li>
+                            <li>Collaborated on the integration of AI technologies with OpenAI's GPT and Azure,
+                                developing advanced chat functionalities to boost user engagement and support across web
+                                platforms.</li>
+                        </ul>
+                    </div>
+                    <div class="tl-item" data-animate="from-left">
+                        <div class="tl-head">
+                            <h3>Fullstack Web Developer</h3>
+                            <span class="tl-meta">April 2021 – March 2023</span>
+                        </div>
+                        <p class="tl-company">Swiss Organic Partners AG</p>
+                        <ul class="tl-list">
+                            <li>Elevated e-commerce experiences by transitioning Shopify themes to OS 2.0, and
+                                automating deployments directly from GitHub to Shopify, enhancing operational
+                                efficiency.</li>
+                            <li>Crafted bespoke Shopify templates and interactive sections from tailored Figma designs,
+                                employing Tailwind CSS and Alpine JS for responsive and dynamic user interfaces.</li>
+                            <li>Orchestrated project management and development lifecycle utilizing the SCRUM framework,
+                                coupled with Jira for streamlined organization and progress tracking.</li>
+                            <li>Mentored and equipped an IT specialist with advanced technical skills, promoting team
+                                capability and knowledge sharing.</li>
+                            <li>Developed custom WordPress company website using ACF, enabling more high-quality leads
+                                generation.</li>
+                            <li>Developed WordPress plugin for custom block type.</li>
+                        </ul>
+                    </div>
+                    <div class="tl-item" data-animate="from-left">
+                        <div class="tl-head">
+                            <h3>Freelance Web Developer</h3>
+                            <span class="tl-meta">2013 – 2021</span>
+                        </div>
+                        <p class="tl-company">Remote</p>
+                        <ul class="tl-list">
+                            <li>Spearheaded a variety of web development projects, leveraging SCRUM methodologies and
+                                collaboration tools to enhance team efficiency and achieve high client satisfaction.
+                            </li>
+                            <li>Upgraded online experiences by transforming traditional HTML sites into adaptive
+                                WordPress templates, optimizing for search engines, and facilitating content management
+                                systems for user autonomy post-deployment.</li>
+                            <li>Executed the end-to-end creation of dynamic web solutions using a suite of technologies
+                                (HTML5, CSS3, JavaScript, Bootstrap, APIs, WordPress), catering to diverse industry
+                                needs and project scopes.</li>
+                            <li>Provided a comprehensive array of web services encompassing consulting, site
+                                maintenance, and hosting management, with a commitment to delivering on time.</li>
+                            <li>Completed full-scale web projects for numerous startups, from design to development to
+                                launch.</li>
+                            <li>Collaborated closely with clients, both remotely and in-person, to bring their ideas to
+                                life.</li>
+                            <li>Communicated with clients one-on-one to make requested adjustments to the design &amp;
+                                functionality of websites.</li>
+                            <li>Utilized SEO methods to support the online presence of websites.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ============ PROJECTS ============ -->
+            <section id="projects" class="section" aria-labelledby="projects-h">
+                <div class="section-head">
+                    <p class="eyebrow" data-animate="from-bottom">Projects</p>
+                    <h2 id="projects-h" data-animate="from-bottom">Selected work</h2>
+                    <p data-animate="from-bottom">A few representative builds — swap in your own descriptions, links,
+                        and tags.</p>
+                </div>
+                <div class="grid-3up" data-stagger>
+                    <a class="frame frame-featured proj-card" href="https://www.planted.com" target="_blank"
+                        rel="noopener">
+                        <span class="caps"></span>
+                        <div class="proj-thumb">
+                            <img src="/proj-checkout.svg" alt="Planted Checkout Extensions preview" loading="lazy"
+                                width="640" height="400" />
+                            <span class="proj-link" title="Visit live site">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <path d="M7 17 17 7M9 7h8v8" />
+                                </svg>
+                            </span>
+                        </div>
+                        <div class="proj-body">
+                            <span class="proj-kicker">Shopify · B2B · Live site</span>
+                            <h4>Planted Checkout Extensions</h4>
+                            <p>React-based Shopify Checkout UI extensions for PO numbers and delivery dates, wired to a
+                                custom Go connector syncing Shopify with Business Central.</p>
+                            <div class="proj-tags"><span>React</span><span>Shopify Plus</span><span>Golang</span></div>
+                        </div>
+                    </a>
+                    <a class="frame proj-card" href="https://github.com/milanpetrovic" target="_blank" rel="noopener">
+                        <span class="caps"></span>
+                        <div class="proj-thumb">
+                            <img src="/proj-ai-chat.svg" alt="AI Support Chat Integration preview" loading="lazy"
+                                width="640" height="400" />
+                            <span class="proj-link" title="View repository">
+                                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                    <path
+                                        d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.49 0-.24-.01-.88-.01-1.73-2.78.62-3.37-1.37-3.37-1.37-.45-1.18-1.11-1.5-1.11-1.5-.91-.64.07-.63.07-.63 1 .07 1.53 1.06 1.53 1.06.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.06 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.71 0 0 .84-.28 2.75 1.05A9.36 9.36 0 0 1 12 6.84c.85 0 1.71.12 2.51.34 1.91-1.33 2.75-1.05 2.75-1.05.55 1.41.2 2.45.1 2.71.64.72 1.03 1.63 1.03 2.75 0 3.93-2.34 4.79-4.57 5.05.36.32.68.94.68 1.91 0 1.38-.01 2.49-.01 2.83 0 .27.18.6.69.49A10.02 10.02 0 0 0 22 12.25C22 6.58 17.52 2 12 2z" />
+                                </svg>
+                            </span>
+                        </div>
+                        <div class="proj-body">
+                            <span class="proj-kicker">AI · Support · GitHub</span>
+                            <h4>AI Support Chat Integration</h4>
+                            <p>Conversational support built on OpenAI's GPT and Azure, embedded across B2B and B2C web
+                                platforms to boost engagement and deflect tickets.</p>
+                            <div class="proj-tags"><span>Open AI API</span><span>Azure</span><span>Node.js</span></div>
+                        </div>
+                    </a>
+                    <a class="frame proj-card" href="https://github.com/milanpetrovic" target="_blank" rel="noopener">
+                        <span class="caps"></span>
+                        <div class="proj-thumb">
+                            <img src="/proj-os2.svg" alt="Shopify OS 2.0 Migration preview" loading="lazy" width="640"
+                                height="400" />
+                            <span class="proj-link" title="View repository">
+                                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                    <path
+                                        d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.49 0-.24-.01-.88-.01-1.73-2.78.62-3.37-1.37-3.37-1.37-.45-1.18-1.11-1.5-1.11-1.5-.91-.64.07-.63.07-.63 1 .07 1.53 1.06 1.53 1.06.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.06 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.71 0 0 .84-.28 2.75 1.05A9.36 9.36 0 0 1 12 6.84c.85 0 1.71.12 2.51.34 1.91-1.33 2.75-1.05 2.75-1.05.55 1.41.2 2.45.1 2.71.64.72 1.03 1.63 1.03 2.75 0 3.93-2.34 4.79-4.57 5.05.36.32.68.94.68 1.91 0 1.38-.01 2.49-.01 2.83 0 .27.18.6.69.49A10.02 10.02 0 0 0 22 12.25C22 6.58 17.52 2 12 2z" />
+                                </svg>
+                            </span>
+                        </div>
+                        <div class="proj-body">
+                            <span class="proj-kicker">Shopify · Themes · GitHub</span>
+                            <h4>Shopify OS 2.0 Migration</h4>
+                            <p>Migrated legacy storefronts to Online Store 2.0 with bespoke Liquid sections from Figma,
+                                plus automated GitHub-to-Shopify deployments.</p>
+                            <div class="proj-tags"><span>Liquid</span><span>Tailwind CSS</span><span>Alpine JS</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </section>
+
+            <!-- ============ EDUCATION (dark band) ============ -->
+            <section id="education" class="section band-dark" aria-labelledby="education-h">
+                <div class="section-inner">
+                    <div class="section-head">
+                        <p class="eyebrow text-honey-200" data-animate="from-bottom">Education &amp; Self-Learning</p>
+                        <h2 id="education-h" data-animate="from-bottom">Always learning</h2>
+                        <p data-animate="from-bottom" class="text-stone-400">A self-taught developer — here's where I
+                            keep my skills sharp across the stack.</p>
+                    </div>
+                    <div class="grid-3up" data-stagger>
+                        <div class="frame edu-card">
+                            <span class="caps"></span>
+                            <span class="edu-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="m22 8-10 6L2 8l10-6 10 6z" />
+                                    <path d="M6 11v5c0 1 2.5 2.5 6 2.5s6-1.5 6-2.5v-5" />
+                                </svg>
+                            </span>
+                            <h4>Laravel &amp; PHP</h4>
+                            <span class="edu-source">Laracasts</span>
+                            <p class="muted">Deep-diving Laravel and modern PHP through Jeffrey Way's Laracasts
+                                screencasts and course series.</p>
+                        </div>
+                        <div class="frame edu-card">
+                            <span class="caps"></span>
+                            <span class="edu-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z" />
+                                    <path d="M3 6h18M16 10a4 4 0 0 1-8 0" />
+                                </svg>
+                            </span>
+                            <h4>Shopify Commerce</h4>
+                            <span class="edu-source">Shopify Academy</span>
+                            <p class="muted">Theme architecture, app development, and merchant best practices straight
+                                from official Shopify Academy courses.</p>
+                        </div>
+                        <div class="frame edu-card">
+                            <span class="caps"></span>
+                            <span class="edu-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <polygon points="23 7 16 12 23 17 23 7" />
+                                    <rect x="1" y="5" width="15" height="14" rx="2" />
+                                </svg>
+                            </span>
+                            <h4>Rust · Frontend · AI</h4>
+                            <span class="edu-source">YouTube &amp; beyond</span>
+                            <p class="muted">Keeping current on Rust, modern frontend, and AI industry news through
+                                YouTube and a rotation of other platforms.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ============ TESTIMONIALS ============ -->
+            <section id="testimonials" class="section" aria-labelledby="testimonials-h">
+                <div class="section-head">
+                    <p class="eyebrow" data-animate="from-bottom">Testimonials</p>
+                    <h2 id="testimonials-h" data-animate="from-bottom">What people say</h2>
+                    <p data-animate="from-bottom">Placeholder quotes — replace the text, names, and roles with your own
+                        references.</p>
+                </div>
+                <div class="grid-3up" data-stagger>
+                    <figure class="frame frame-featured quote-card">
+                        <span class="caps"></span>
+                        <div class="quote-mark" aria-hidden="true">&ldquo;</div>
+                        <blockquote>Milan took our Shopify Plus store to another level. The checkout extensions he built
+                            were rock-solid and shipped ahead of schedule.</blockquote>
+                        <figcaption class="quote-author">
+                            <img class="quote-avatar quote-avatar-img" src="/avatar-1.svg" alt="Jonas Keller" width="44"
+                                height="44" />
+                            <span class="meta"><strong>Jonas Keller</strong><span>Product Lead, Planted
+                                    Foods</span></span>
+                        </figcaption>
+                    </figure>
+                    <figure class="frame quote-card">
+                        <span class="caps"></span>
+                        <div class="quote-mark" aria-hidden="true">&ldquo;</div>
+                        <blockquote>A rare mix of frontend craft and backend pragmatism. Our OS 2.0 migration was
+                            seamless and our deploy times dropped dramatically.</blockquote>
+                        <figcaption class="quote-author">
+                            <img class="quote-avatar quote-avatar-img" src="/avatar-2.svg" alt="Anna Meier" width="44"
+                                height="44" />
+                            <span class="meta"><strong>Anna Meier</strong><span>E-commerce Manager, Swiss Organic
+                                    Partners</span></span>
+                        </figcaption>
+                    </figure>
+                    <figure class="frame quote-card">
+                        <span class="caps"></span>
+                        <div class="quote-mark" aria-hidden="true">&ldquo;</div>
+                        <blockquote>Reliable, communicative, and genuinely invested in the outcome. Milan delivered our
+                            startup's site end to end and we still get compliments on it.</blockquote>
+                        <figcaption class="quote-author">
+                            <span class="quote-avatar" aria-hidden="true">DS</span>
+                            <span class="meta"><strong>David Stojanović</strong><span>Founder, Freelance
+                                    Client</span></span>
+                        </figcaption>
+                    </figure>
+                </div>
+            </section>
+
+            <!-- ============ CONTACT (reference-style centered feature cards) ============ -->
+            <section id="contact" class="section" aria-labelledby="contact-h">
+                <div class="section-head">
+                    <p class="eyebrow" data-animate="from-bottom">Contact Info</p>
+                    <h2 id="contact-h" data-animate="from-bottom">Let's build something together</h2>
+                </div>
+                <div class="grid-4" data-stagger>
+                    <a class="frame frame-featured feature" href="tel:+38162601422">
+                        <span class="caps"></span>
+                        <div class="glyph-wrap">
+                            <span class="glyph-grid" aria-hidden="true"></span>
+                            <span class="glyph">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <path
+                                        d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z" />
+                                </svg>
+                            </span>
+                        </div>
+                        <h4>Phone</h4>
+                        <p>+38162601422</p>
+                    </a>
+                    <a class="frame feature" href="mailto:hello@milanpetrovic.dev">
+                        <span class="caps"></span>
+                        <div class="glyph-wrap">
+                            <span class="glyph-grid" aria-hidden="true"></span>
+                            <span class="glyph">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <rect x="2" y="4" width="20" height="16" rx="2" />
+                                    <path d="m22 7-10 6L2 7" />
+                                </svg>
+                            </span>
+                        </div>
+                        <h4>Email</h4>
+                        <p>hello@milanpetrovic.dev</p>
+                    </a>
+                    <a class="frame feature" href="https://github.com/milanpetrovic" target="_blank" rel="noopener">
+                        <span class="caps"></span>
+                        <div class="glyph-wrap">
+                            <span class="glyph-grid" aria-hidden="true"></span>
+                            <span class="glyph">
+                                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                    <path
+                                        d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.49 0-.24-.01-.88-.01-1.73-2.78.62-3.37-1.37-3.37-1.37-.45-1.18-1.11-1.5-1.11-1.5-.91-.64.07-.63.07-.63 1 .07 1.53 1.06 1.53 1.06.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.06 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.71 0 0 .84-.28 2.75 1.05A9.36 9.36 0 0 1 12 6.84c.85 0 1.71.12 2.51.34 1.91-1.33 2.75-1.05 2.75-1.05.55 1.41.2 2.45.1 2.71.64.72 1.03 1.63 1.03 2.75 0 3.93-2.34 4.79-4.57 5.05.36.32.68.94.68 1.91 0 1.38-.01 2.49-.01 2.83 0 .27.18.6.69.49A10.02 10.02 0 0 0 22 12.25C22 6.58 17.52 2 12 2z" />
+                                </svg>
+                            </span>
+                        </div>
+                        <h4>Github</h4>
+                        <p>github.com/milanpetrovic</p>
+                    </a>
+                    <a class="frame feature" href="https://www.linkedin.com/in/milan-mushin/" target="_blank"
+                        rel="noopener">
+                        <span class="caps"></span>
+                        <div class="glyph-wrap">
+                            <span class="glyph-grid" aria-hidden="true"></span>
+                            <span class="glyph">
+                                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                    <path
+                                        d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14zM8.34 18.34V9.99H5.67v8.35h2.67zM7 8.81a1.55 1.55 0 1 0 0-3.1 1.55 1.55 0 0 0 0 3.1zm11.34 9.53v-4.58c0-2.45-1.31-3.59-3.06-3.59-1.41 0-2.04.78-2.39 1.32v-1.13h-2.67c.04.75 0 8.35 0 8.35h2.67v-4.66c0-.24.02-.48.09-.65.19-.48.63-.98 1.36-.98.96 0 1.34.73 1.34 1.8v4.49h2.66z" />
+                                </svg>
+                            </span>
+                        </div>
+                        <h4>LinkedIn</h4>
+                        <p>linkedin.com/in/milan-mushin</p>
+                    </a>
+                </div>
+            </section>
+
         </main>
 
-        <footer class="bg-white dark:bg-zinc-900 print:hidden ring-1 ring-zinc-200 dark:ring-zinc-300/20">
-          <div class="max-w-7xl mx-auto py-4 flex items-center justify-center">
-            <p class="text-center text-sm text-gray-700 dark:text-gray-400">
-              &copy; 2022 Milan Petrovic. All rights reserved.
-            </p>
-          </div>
+        <!-- ============ FOOTER ============ -->
+        <footer class="footer">
+            <div class="socials">
+                <a href="https://github.com/milanpetrovic" target="_blank" rel="noopener" aria-label="Github">
+                    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                        <path
+                            d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.49 0-.24-.01-.88-.01-1.73-2.78.62-3.37-1.37-3.37-1.37-.45-1.18-1.11-1.5-1.11-1.5-.91-.64.07-.63.07-.63 1 .07 1.53 1.06 1.53 1.06.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.06 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.71 0 0 .84-.28 2.75 1.05A9.36 9.36 0 0 1 12 6.84c.85 0 1.71.12 2.51.34 1.91-1.33 2.75-1.05 2.75-1.05.55 1.41.2 2.45.1 2.71.64.72 1.03 1.63 1.03 2.75 0 3.93-2.34 4.79-4.57 5.05.36.32.68.94.68 1.91 0 1.38-.01 2.49-.01 2.83 0 .27.18.6.69.49A10.02 10.02 0 0 0 22 12.25C22 6.58 17.52 2 12 2z" />
+                    </svg>
+                </a>
+                <a href="https://www.linkedin.com/in/milan-mushin/" target="_blank" rel="noopener"
+                    aria-label="LinkedIn">
+                    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                        <path
+                            d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14zM8.34 18.34V9.99H5.67v8.35h2.67zM7 8.81a1.55 1.55 0 1 0 0-3.1 1.55 1.55 0 0 0 0 3.1zm11.34 9.53v-4.58c0-2.45-1.31-3.59-3.06-3.59-1.41 0-2.04.78-2.39 1.32v-1.13h-2.67c.04.75 0 8.35 0 8.35h2.67v-4.66c0-.24.02-.48.09-.65.19-.48.63-.98 1.36-.98.96 0 1.34.73 1.34 1.8v4.49h2.66z" />
+                    </svg>
+                </a>
+                <a href="mailto:hello@milanpetrovic.dev" aria-label="Email">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" aria-hidden="true">
+                        <rect x="2" y="4" width="20" height="16" rx="2" />
+                        <path d="m22 7-10 6L2 7" />
+                    </svg>
+                </a>
+            </div>
+            <p class="m-0">&copy; 2022 Milan Petrovic. All rights reserved.</p>
         </footer>
-  
+
     </div>
 
-    <script src="assets/scripts/app.js"></script>
+    <button class="to-top" id="toTop" aria-label="Back to top">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"
+            stroke-linejoin="round" aria-hidden="true">
+            <path d="M12 19V5M6 11l6-6 6 6" />
+        </svg>
+    </button>
+
+    <script type="module" src="/src/main.js"></script>
 </body>
+
 </html>
