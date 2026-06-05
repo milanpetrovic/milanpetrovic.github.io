@@ -1,7 +1,5 @@
 // Self-host Instrument Sans (variable) via Fontsource
 import "@fontsource-variable/instrument-sans";
-// Styles (Tailwind v4 + theme + components)
-import "./style.css";
 
 /* Lightweight, dependency-free interactions
    (scroll reveals, active nav, back-to-top) */
@@ -80,7 +78,7 @@ if (themeToggle) {
         else root.setAttribute("data-theme", "dark");
         try {
             localStorage.setItem("theme", isDark ? "light" : "dark");
-        } catch (e) {}
+        } catch (e) { }
         sync();
     });
 }
