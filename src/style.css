@@ -78,7 +78,7 @@ html[data-theme="dark"] {
 
 /* Component fixups for places that used a token as a *surface* rather than ink */
 html[data-theme="dark"] body {
-    background-color: var(--color-serenade-50);
+    background-color: var(--color-paper);
     background-image: none;
 }
 
@@ -376,6 +376,13 @@ html[data-theme="dark"] .edu-card.frame>.caps::after {
         border-color: var(--color-cocoa);
         width: 1.05rem;
         height: 1.05rem;
+    }
+
+    html[data-theme="dark"] .frame:hover::before,
+    html[data-theme="dark"] .frame:hover::after,
+    html[data-theme="dark"] .frame:hover>.caps::before,
+    html[data-theme="dark"] .frame:hover>.caps::after {
+        border-color: var(--color-stone-900);
     }
 
     /* featured (pink) frame — matches the highlighted reference card */
@@ -903,6 +910,12 @@ html[data-theme="dark"] .edu-card.frame>.caps::after {
         font-weight: 500;
     }
 
+    html[data-theme="dark"] .tl-company,
+    html[data-theme="dark"] .proj-kicker {
+        color: var(--color-stone-800);
+        /* Shifts from Orange to a soft Creme */
+    }
+
     .tl-list {
         margin: 0.85rem 0 0;
         padding: 0;
@@ -924,6 +937,13 @@ html[data-theme="dark"] .edu-card.frame>.caps::after {
         width: 0.4rem;
         height: 0.4rem;
         background: var(--color-honey-200);
+    }
+
+    html[data-theme="dark"] .tl-item::before,
+    html[data-theme="dark"] .tl-item:last-child::after,
+    html[data-theme="dark"] .tl-list li::before {
+        background: var(--color-stone-800);
+        /* Shifts from Orange to Creme */
     }
 
     /* ---- Projects ---- */
@@ -1044,6 +1064,11 @@ html[data-theme="dark"] .edu-card.frame>.caps::after {
         height: 1.1rem;
     }
 
+    html[data-theme="dark"] .quote-mark {
+        color: var(--color-bone-500);
+        /* Recedes into a subtle mid-tone Green */
+    }
+
     .quote-card blockquote {
         margin: 0;
         font-size: 1rem;
@@ -1130,9 +1155,15 @@ html[data-theme="dark"] .edu-card.frame>.caps::after {
         width: 2.75rem;
         height: 2.75rem;
         margin-bottom: 1rem;
-        background: color-mix(in srgb, var(--color-honey-200) 22%, transparent);
-        color: var(--color-honey-200);
-        border: 1px solid color-mix(in srgb, var(--color-honey-200) 40%, transparent);
+        background: color-mix(in srgb, var(--color-serenade-50) 22%, transparent);
+        color: var(--color-serenade-50);
+        border: 1px solid color-mix(in srgb, var(--color-serenade-50) 40%, transparent);
+    }
+
+    html[data-theme="dark"] .edu-card .edu-icon {
+        background: color-mix(in srgb, var(--color-stone-800) 22%, transparent);
+        color: var(--color-stone-800);
+        border-color: color-mix(in srgb, var(--color-stone-800) 40%, transparent);
     }
 
     .edu-card .edu-icon svg {
@@ -1155,12 +1186,19 @@ html[data-theme="dark"] .edu-card.frame>.caps::after {
         letter-spacing: 0.08em;
         text-transform: uppercase;
         color: var(--color-stone-900);
-        background: var(--color-honey-200);
+        background: var(--color-serenade-50);
+    }
+
+    html[data-theme="dark"] .edu-card .edu-source {
+        background: var(--color-stone-900);
+        /* Muted Light Green background */
+        color: var(--color-stone-900);
+        /* Crisp Creme text */
     }
 
     .edu-card .muted {
         margin: 0;
-        color: var(--color-stone-400);
+        color: var(--color-stone-200);
         line-height: 1.55;
     }
 
@@ -1216,7 +1254,7 @@ html[data-theme="dark"] .edu-card.frame>.caps::after {
         display: grid;
         place-items: center;
         background: var(--color-stone-900);
-        color: var(--color-honey-100);
+        color: var(--color-serenade-50);
         border: none;
         cursor: pointer;
         opacity: 0;
